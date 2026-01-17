@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rosella"
+version = "0.1.0"
+description = "Parakeet speech-to-text straight from the MacOS menu-bar"
+requires-python = ">=3.10"
+dependencies = [
+    "pyobjc-framework-Cocoa",
+    "parakeet-mlx>=0.5.0",
+    "pyaudio",
+]
+
+[tool.setuptools]
+py-modules = ["rosella"]
+
+
+
+[project.scripts]
+rosella = "rosella:main"
